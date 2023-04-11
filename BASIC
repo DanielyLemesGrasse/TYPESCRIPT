@@ -1,0 +1,21 @@
+function getRandomNumber(min: number, max: number): number {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function generateRandomNumbers(numNumbers: number, min: number, max: number): number[] {
+  const randomNumbers: number[] = [];
+
+  for (let i = 0; i < numNumbers; i++) {
+    const randomNumber = getRandomNumber(min, max);
+    randomNumbers.push(randomNumber);
+  }
+
+  return randomNumbers;
+}
+
+const numNumbers = 10;
+const min = 1;
+const max = 100;
+
+const randomNumbers = generateRandomNumbers(numNumbers, min, max);
+console.log(`Os números sorteados são: ${randomNumbers}`);
